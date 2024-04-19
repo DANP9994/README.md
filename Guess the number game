@@ -1,0 +1,22 @@
+print("choose a random number 1-100")
+from random import randint
+
+number = randint(1,100)  
+attempts = 0  
+
+print("Choose a random number from 1-100")
+
+while attempts != 3:  
+    guess = int(input("Make your guess: "))  
+
+    if guess > number: 
+        print("Wrong, the number I guessed is lower than this, try again!")
+        attempts = attempts + 1  
+    elif guess < number: 
+        print("Wrong, the number I guessed is higher than this, try again!")
+        attempts = attempts + 1  
+    else:  
+        print("You guessed correctly.")
+        exit()  
+
+print(f"The number is {number}")
